@@ -1,0 +1,8 @@
+.idea
+node_modules
+.env
+pg-data
+postgres-data
+build
+.DS_Store
+tasks-tracker-plugin
