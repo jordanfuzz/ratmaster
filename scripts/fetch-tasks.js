@@ -88,7 +88,10 @@ function parseTasks(wikitext) {
     const named = {}
     for (let i = 1; i < args.length; i++) {
       const eqIdx = args[i].indexOf('=')
-      if (eqIdx !== -1 && /^[a-z_]+$/.test(args[i].substring(0, eqIdx).trim())) {
+      if (
+        eqIdx !== -1 &&
+        /^[a-z_]+$/.test(args[i].substring(0, eqIdx).trim())
+      ) {
         const key = args[i].substring(0, eqIdx).trim()
         named[key] = args[i].substring(eqIdx + 1).trim()
       } else {

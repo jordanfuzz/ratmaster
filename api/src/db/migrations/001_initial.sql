@@ -19,4 +19,5 @@ CREATE TABLE player_regions (
 );
 
 CREATE INDEX idx_player_tasks_username ON player_tasks(username);
+
 CREATE INDEX idx_player_regions_username ON player_regions(username);

@@ -30,9 +30,7 @@ export default function GroupPage({ tasks }) {
   const analysis = useMemo(() => {
     if (players.length < 2) return null
 
-    const completedSets = players.map(
-      p => new Set(p.completedTaskIds || [])
-    )
+    const completedSets = players.map(p => new Set(p.completedTaskIds || []))
 
     // Tasks no one has done
     const noneCompleted = tasks.filter(t =>
@@ -85,10 +83,12 @@ export default function GroupPage({ tasks }) {
                   {p.completedTaskIds.length} tasks completed
                 </div>
                 <div className="text-xs text-osrs-text">
-                  {p.completedTaskIds.reduce((sum, id) => {
-                    const task = tasks.find(t => t.id === id)
-                    return sum + (task?.points || 0)
-                  }, 0).toLocaleString()}{' '}
+                  {p.completedTaskIds
+                    .reduce((sum, id) => {
+                      const task = tasks.find(t => t.id === id)
+                      return sum + (task?.points || 0)
+                    }, 0)
+                    .toLocaleString()}{' '}
                   points
                 </div>
                 <div className="text-xs text-osrs-text">

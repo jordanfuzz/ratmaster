@@ -14,5 +14,7 @@ export function fetchPlayer(username) {
 }
 
 export function fetchGroup(usernames) {
-  return request(`/group?usernames=${usernames.map(encodeURIComponent).join(',')}`)
+  return request(
+    `/group?usernames=${usernames.map(encodeURIComponent).join(',')}`
+  )
 }

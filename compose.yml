@@ -40,7 +40,7 @@ services:
       dockerfile: Dockerfile
       target: dev
     environment:
-      VITE_API_URL: http://localhost:3000
+      API_URL: http://api:3000
     ports:
       - '5173:5173'
     volumes:
