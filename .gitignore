@@ -4,5 +4,7 @@ node_modules
 pg-data
 postgres-data
 build
+dist
 .DS_Store
+.gradle
 tasks-tracker-plugin
